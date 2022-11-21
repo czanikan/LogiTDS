@@ -19,3 +19,12 @@ func _on_Bullet_body_entered(body):
 		body.health_label.text = "HP: " + str(body.player_health) 
 		if body.player_health <= 0:
 			body.set_process(false)
+	if "Bot" in body.name:
+		if body.bot_health > 0:
+			body.bot_health -= bullet_damage
+			body.health_label.text = "HP: " + str(body.bot_health) 
+		else:
+			body.queue_free()
+			body.health_label.queue_free()
+	queue_free()
+		
