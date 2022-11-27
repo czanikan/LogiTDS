@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=3]
 
 [node name="MainScene" type="Node2D"]
@@ -20,3 +21,12 @@ tile_data = PoolIntArray( -1572870, 27, 0, -1572865, 29, 0, -1638393, 29, 0, -16
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 316, 299 )
+
+[node name="Bot" parent="." instance=ExtResource( 2 )]
+position = Vector2( 584, 565 )
+
+[node name="Bot2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -647, 392 )
+
+[node name="Bot3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -716, 210 )
